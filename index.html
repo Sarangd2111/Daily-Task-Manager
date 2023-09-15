@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="checklist.png" />
+    <title>Task Manager</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="head top">
+        <h1>To-Do</h1>
+    </div>
+    <div class="tasks">
+        <div class="addtask pos">
+            <div id="taskForm" class="taskform">
+                <input type="text" id="taskName" placeholder="Task Name">
+                <input type="datetime-local" id="startTime">
+                <input type="datetime-local" id="endTime">
+                <div class="details">
+                    <input type="text" placeholder="Comments" id="taskDetails">
+                </div>
+                <!-- <input type="file" id="taskImage"> -->
+                <button id="saveTask" type="submit">Add</button>
+            </div>
+            <div>
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+        </div>
+        <div class="listnav pos">
+            <div class="list" id="list">
+                <ul id="sideNavList" class="sideList"></ul>
+            </div>
+            <div>
+                <button class="task-controller" id="listNav">Tasks</button>
+            </div>
+        </div>
+        <div class="cards">
+        <ul id="taskList" class="task-list"></ul>
+    </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

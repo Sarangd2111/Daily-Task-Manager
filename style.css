@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-margin: 150px;
+  }
+
+  body{
+    background-color: rgb(238, 238, 238);
+
+  }
+/* Heading */
+
+.top{
+    position: fixed;
+    z-index: 1;
+}
+.head{
+    font-size:25px;
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(76, 149, 153);
+    color:aliceblue;
+    max-height: 100px;
+    font-family: 'Dancing Script', cursive; 
+    min-width: 100%;
+}
+
+
+h1{
+    transition: 0.2s ease-in-out;
+    padding: 10px;
+}
+
+h1:hover{
+    text-shadow: 2px 2px black;
+    transition: 0.2s ease-in-out;
+}
+
+
+
+/* Button */
+button{
+    background-color: rgb(33, 33, 33);
+    padding: 5px 20px 10px 20px;
+    border-bottom-left-radius:50%;
+    border-bottom-right-radius:50%;
+    color: white;
+    transition: 0.3s;
+    border-color: rgb(76, 149, 153);
+    box-shadow: 3px 3px 10px 1px rgb(76, 149, 153), 1px 1px  rgb(76, 149, 153) inset;
+}
+
+button:hover{
+    background-color: rgb(0, 0, 0);
+    transition: 0.3s;
+    scale: 1.05;
+    cursor:pointer;
+}
+
+/* Add task panel */
+
+.addtask{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.pos{
+    position: fixed !important;
+}
+
+
+.taskform{
+    box-shadow: 1px 1px 10px 5px rgb(76, 149, 153);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+    max-width: 200px;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    border: 3px solid rgb(76, 149, 153);
+    background-color: white;
+}
+
+input{
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid rgb(76, 149, 153) ;
+    box-shadow: 1px 1px 1px 1px rgb(76, 149, 153);
+    border-radius: 6% ;
+}
+
+#saveTask{
+    margin-top: 5px;
+}
+
+.listnav{
+    display: flex;
+    position: absolute;
+    left: 0;
+    flex-direction: row;
+    z-index: 1;
+}
+
+.task-controller{
+    transform: translate(-25px,40vh) rotateZ(-90deg);
+    left: 0;
+    position: absolute;
+}
+
+a{
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(33, 33, 33);
+    padding: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+a:hover{
+    scale: 1.05 !important;
+    transition: 0.2s ease-in-out;
+    box-shadow: 2px 2px 20px 1px black;
+}
+
+.slide{
+    left: 0;
+    position: absolute;
+    transform : translateX(252px) translateY(40vh) rotateZ(-90deg);
+}
+
+.list{
+    display: none;
+    box-shadow: 2px 2px 10px 1px black;
+    min-height: 80vh;
+    background-color: rgb(204, 227, 227);
+    border: 3px solid rgb(76, 149, 153) ;
+    width: 230px;
+    z-index: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start !important;
+    padding: 20px;
+}
+
+.tasks{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin-top: 80px;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-self: center;
+    /* margin-left: 800px; */
+    /* margin-top: 15px; */
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 3px solid rgb(76, 149, 153);
+    min-height: 500px;
+    flex-direction: column;
+    max-width: 200px;
+    min-width: 200px;
+    margin: 15px;
+    box-shadow: 2px 2px 15px 1px black ;
+    background-color: rgb(204, 227, 227);
+    margin-top: 60px; 
+    transition: 0.3s ease-in-out;
+}
+
+.task:hover{
+    scale: 1.02;
+    transition: 0.3s ease-in-out;
+    box-shadow: 4px 4px 20px 10px black ;
+}
+
+span{
+    font-size: 30px;     
+    transition: 0.2s ease-in-out;
+    padding: 5px;
+}
+
+p{
+    font-size: 16px;
+}
+
+span:hover{
+    text-shadow: 2px 2px black;
+    transition: 0.2s ease-in-out;
+}
+
+.comment{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.open{
+    display: flex !important;
+    justify-content: center;
+    z-index: 1;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.completed-task {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+select,
+input[type="time"] {
+    padding: 5px;
+}
+
+ @media screen and (max-width: 762px) {
+    .task-list{
+        flex-direction: column;
+        z-index: 0;
+        margin-left: 0;
+        justify-content: center;
+    }
+}
