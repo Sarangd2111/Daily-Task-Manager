@@ -12,6 +12,8 @@ const endTimeInput = document.getElementById('endTime');
 const saveTaskBtn = document.getElementById('saveTask');
 let task_id_no=0;
 
+// document.querySelector('video').playbackRate = 0.5;
+
 addTaskBtn.addEventListener('click', () => {
     taskForm.classList.toggle('open')
     if (addTaskBtn.innerHTML == "Add Task") {
@@ -50,19 +52,19 @@ saveTaskBtn.addEventListener('click', () => {
     // taskItem.style.backgroundSize = 'cover';
     // taskItem.style.backgroundPosition = 'center';
     taskItem.innerHTML = `
-    <div class="head">
+    <div class="head taskhead">
         <span>${taskName}</span>
     </div>
     <div class="timeslot">
-        <div class="head">
+        <div class="head taskhead timehead">
             <span>Time</span>
         </div>
-        <p>Start: ${startTime}</p> <br/>
+        <p>Start: ${startTime}</p> 
         <p>End: ${endTime}</p>
     </div>
     
     <div class="comment">
-        <div class="head">
+        <div class="head taskhead">
             <span>Details</span>
         </div>
         <p>${taskDetails}</p>
