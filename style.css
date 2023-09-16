@@ -161,7 +161,7 @@ input{
 
 
 .task-controller{
-    transform: translate(-85px,40vh) rotateZ(-90deg);
+    transform: translate(-100px,40vh) rotateZ(-90deg);
     position: absolute;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
