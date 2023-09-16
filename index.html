@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="checklist.png" />
     <title>Task Manager</title>
@@ -17,12 +17,15 @@
     <div class="head top">
         <h1>To-Do</h1>
     </div>
+    <video autoplay muted loop id="myVideo">
+        <source src="calo2.mp4" type="video/mp4">
+      </video>
     <div class="tasks">
         <div class="addtask pos">
             <div id="taskForm" class="taskform">
                 <input type="text" id="taskName" placeholder="Task Name">
-                <input type="datetime-local" id="startTime">
-                <input type="datetime-local" id="endTime">
+                <input type="datetime-local" id="startTime" class="timeinput">
+                <input type="datetime-local" id="endTime" class="timeinput">
                 <div class="details">
                     <input type="text" placeholder="Comments" id="taskDetails">
                 </div>
@@ -37,9 +40,7 @@
             <div class="list" id="list">
                 <ul id="sideNavList" class="sideList"></ul>
             </div>
-            <div>
-                <button class="task-controller" id="listNav">Tasks</button>
-            </div>
+            <button class="task-controller" id="listNav">Tasks</button>
         </div>
         <div class="cards">
         <ul id="taskList" class="task-list"></ul>
